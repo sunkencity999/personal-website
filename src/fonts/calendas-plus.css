@@ -1,0 +1,35 @@
+/* Calendas Plus Regular */
+@font-face {
+    font-family: 'Calendas Plus';
+    src: url('regular/calendas_plus-webfont.eot');
+    src: url('regular/calendas_plus-webfont.eot?#iefix') format('embedded-opentype'),
+         url('regular/calendas_plus-webfont.woff2') format('woff2'),
+         url('regular/calendas_plus-webfont.woff') format('woff'),
+         url('regular/calendas_plus-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Calendas Plus Italic */
+@font-face {
+    font-family: 'Calendas Plus';
+    src: url('italic/calendas_plus_italic-webfont.eot');
+    src: url('italic/calendas_plus_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('italic/calendas_plus_italic-webfont.woff2') format('woff2'),
+         url('italic/calendas_plus_italic-webfont.woff') format('woff'),
+         url('italic/calendas_plus_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Calendas Plus Bold */
+@font-face {
+    font-family: 'Calendas Plus';
+    src: url('bold/calendas_plus_bold-webfont.eot');
+    src: url('bold/calendas_plus_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bold/calendas_plus_bold-webfont.woff2') format('woff2'),
+         url('bold/calendas_plus_bold-webfont.woff') format('woff'),
+         url('bold/calendas_plus_bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

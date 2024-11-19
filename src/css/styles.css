@@ -1,0 +1,112 @@
+/* Import Calendas Plus font */
+@import url('../fonts/calendas-plus.css');
+
+/* Base styles */
+:root {
+    --font-primary: 'Calendas Plus', Georgia, serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Custom Typography */
+body {
+    font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+}
+
+/* Custom Form Styles */
+input, textarea {
+    font-family: var(--font-primary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Custom Button Styles */
+button {
+    font-family: var(--font-primary);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+/* Section Transitions */
+section {
+    transition: opacity 0.5s ease;
+}
+
+/* Skill Card Hover Effects */
+.skill-card {
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom List Styles */
+ul li {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3B82F6;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christopher Bradford - Software Engineer & Technical Leader</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10" x-data="{ isOpen: false }">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-gray-800">Christopher Bradford</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 px-3 py-2">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 px-3 py-2">Skills</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 px-3 py-2">Experience</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 px-3 py-2">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="isOpen = !isOpen" class="text-gray-700">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="isOpen" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600">About</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Skills</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Experience</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-indigo-700 to-amber-500">
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/50 to-transparent"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="hero-title text-4xl sm:text-6xl font-bold text-white mb-6">
+                Christopher Bradford
+            </h1>
+            <p class="hero-subtitle text-xl sm:text-2xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+                Software Engineer & Technical Leader
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">
+                    View Projects
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition duration-300">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="prose lg:prose-xl mx-auto">
+                <p class="text-gray-600 mb-6">
+                    I'm an experienced IT Professional with a passion for developing technical systems and delivering exceptional results. With a diverse background spanning Systems Administration, Software Engineering, and Cybersecurity, I bring a comprehensive understanding of modern technology landscapes to every project.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    As a successful tech entrepreneur, I've led projects from conception to launch, working with talented teams to create innovative solutions. My experience includes launching an AI-based software solution powered by GPT-4, demonstrating my commitment to staying at the forefront of technological advancement.
+                </p>
+                <p class="text-gray-600">
+                    I'm a certified professional with credentials from ISC2 (CC) and CompTIA (Security+), and a graduate of Calbright College's cybersecurity program. My commitment to continuous learning keeps me ahead of the curve in our rapidly evolving industry.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Systems Administration</h3>
+                    <ul class="space-y-2">
+                        <li>Microsoft O365 Administration</li>
+                        <li>SharePoint Administration</li>
+                        <li>Azure Cloud Administration</li>
+                        <li>Linux Systems Administration</li>
+                        <li>Active Directory & LDAP</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Software Development</h3>
+                    <ul class="space-y-2">
+                        <li>Ruby on Rails</li>
+                        <li>LAMP Stack</li>
+                        <li>MERN Stack</li>
+                        <li>Node.JS</li>
+                        <li>React & Angular</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Security & Support</h3>
+                    <ul class="space-y-2">
+                        <li>InfoSec / Cybersecurity</li>
+                        <li>Web Server Security</li>
+                        <li>Help Desk Management</li>
+                        <li>Customer Service</li>
+                        <li>SLA Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Achievements Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects & Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Windows Claude Computer Use Project -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">AI-Powered Computer Control</h3>
+                        <a href="https://github.com/sunkencity999/windows_claude_computer_use" 
+                           target="_blank" 
+                           class="text-blue-600 hover:text-blue-800">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        An innovative AI-powered solution that enables voice control of Windows computers using Claude AI. 
+                        This project demonstrates the practical application of AI in improving computer accessibility and user experience.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold mb-2">Key Features:</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Voice-controlled computer operations</li>
+                            <li>Integration with Claude AI for natural language processing</li>
+                            <li>Windows system automation</li>
+                            <li>Enhanced accessibility features</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">AI Integration</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Automation</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Accessibility</span>
+                    </div>
+                </div>
+
+                <!-- Help Desk Transformation -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <h3 class="text-xl font-semibold mb-4">Help Desk Transformation</h3>
+                    <p class="text-gray-600 mb-4">
+                        Led a successful transition from an internal help desk solution to Zendesk at Alain Pinel Realtors, 
+                        significantly improving service delivery and SLA performance.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold mb-2">Achievements:</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Streamlined ticket management process</li>
+                            <li>Improved SLA performance metrics</li>
+                            <li>Enhanced internal client satisfaction</li>
+                            <li>Implemented best practices in service delivery</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Project Management</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Zendesk</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Service Delivery</span>
+                    </div>
+                </div>
+
+                <!-- AI Software Solution -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-scale">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold">AI-Powered Chat with QoL Features</h3>
+                        <a href="https://github.com/sunkencity999/machineSpiritClaude" class="text-blue-600 hover:text-blue-800">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-600 mb-4">An enhanced AI chat interface powered by GPT-4, featuring quality-of-life improvements that make AI-generated content more accessible and easier to work with.</p>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold mb-2">Key Features:</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Advanced chat interface with GPT-4 integration</li>
+                            <li>Enhanced content manipulation capabilities</li>
+                            <li>Improved user experience features</li>
+                            <li>Streamlined data handling</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">AI Integration</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">UX Design</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">GPT-4</span>
+                    </div>
+                </div>
+
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <div class="space-y-8">
+                <!-- Joby Aviation -->
+                <div class="bg-gray-50 p-6 rounded-lg hover-scale">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold">IT Systems Administrator</h3>
+                        <p class="text-gray-600">Nov 2023 - Present</p>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">Joby Aviation</p>
+                    <div class="text-gray-600 mb-4">
+                        <p>Systems administration and security management in an aviation technology environment.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Asset Security</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">IT Risk Management</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Network Security</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">AWS</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SIEM</span>
+                    </div>
+                </div>
+
+                <!-- Fire Safe Santa Cruz -->
+                <div class="bg-gray-50 p-6 rounded-lg hover-scale">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Treasurer, Board of Directors</h3>
+                        <p class="text-gray-600">Aug 2023 - Present</p>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">FIRE SAFE SANTA CRUZ COUNTY</p>
+                    <div class="text-gray-600 mb-4">
+                        <p>Serving the community by managing grants and empowering people to take proactive steps in fire risk mitigation.</p>
+                    </div>
+                </div>
+
+                <!-- Chegg -->
+                <div class="bg-gray-50 p-6 rounded-lg hover-scale">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Senior Technical Expert</h3>
+                        <p class="text-gray-600">Oct 2018 - Present</p>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">Chegg Inc.</p>
+                    <div class="text-gray-600 mb-4">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Provide skilled technical assessments and actionable feedback</li>
+                            <li>Mentor engineers and generate institutional knowledge</li>
+                            <li>Perform network audits and security assessments</li>
+                            <li>Handle escalated technical issues with rapid response times</li>
+                            <li>Create comprehensive technical documentation</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Asset Security</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Network Security</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">AWS</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">WCAG</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SIEM</span>
+                    </div>
+                </div>
+
+                <!-- Compass -->
+                <div class="bg-gray-50 p-6 rounded-lg hover-scale">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Information Technology System Administrator</h3>
+                        <p class="text-gray-600">Mar 2017 - Sep 2021</p>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">Compass</p>
+                    <div class="text-gray-600 mb-4">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Managed third-party development teams and vendor relationships</li>
+                            <li>Led software implementation and development projects</li>
+                            <li>Administered Linux systems and security architecture</li>
+                            <li>Gathered analytics to improve internal workflows</li>
+                            <li>Managed project timelines and stakeholder communication</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Linux Admin</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Server Administration</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">API</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SharePoint</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">AWS</span>
+                    </div>
+                </div>
+
+                <!-- Alain Pinel -->
+                <div class="bg-gray-50 p-6 rounded-lg hover-scale">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Full Stack Web Developer</h3>
+                        <p class="text-gray-600">Nov 2014 - Sep 2019</p>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-2">Alain Pinel Realtors</p>
+                    <div class="text-gray-600 mb-4">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Developed with LAMP stack and Ruby on Rails</li>
+                            <li>Managed third-party CMS implementations</li>
+                            <li>Created API integrations and data feeds</li>
+                            <li>Performed Linux system administration</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">LAMP Stack</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Ruby on Rails</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">API</span>
+                    </div>
+                </div>
+
+                <!-- Earlier Experience -->
+                <div class="bg-gray-50 p-6 rounded-lg hover-scale">
+                    <h3 class="text-xl font-semibold mb-4">Earlier Experience</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-gray-700 font-semibold">Senior Web Developer - Zanshin Industries</p>
+                            <p class="text-gray-600">Feb 2009 - Nov 2014</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 font-semibold">Software Engineer - As Above Web Design</p>
+                            <p class="text-gray-600">Aug 2006 - Jan 2010</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 font-semibold">General Manager - Starbucks Coffee Co</p>
+                            <p class="text-gray-600">Sep 2001 - Feb 2004</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+            <div class="max-w-lg mx-auto">
+                <form id="contactForm" class="space-y-6" action="handle_contact.php" method="POST" x-data="{ 
+                    formData: { name: '', email: '', message: '' },
+                    submitStatus: '',
+                    submitMessage: '',
+                    async submitForm(e) {
+                        e.preventDefault();
+                        try {
+                            const response = await fetch('handle_contact.php', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/x-www-form-urlencoded',
+                                },
+                                body: new URLSearchParams(this.formData)
+                            });
+                            const result = await response.json();
+                            
+                            if (response.ok) {
+                                this.submitStatus = 'success';
+                                this.submitMessage = result.message;
+                                this.formData = { name: '', email: '', message: '' };
+                            } else {
+                                this.submitStatus = 'error';
+                                this.submitMessage = result.error || 'An error occurred. Please try again.';
+                            }
+                        } catch (error) {
+                            this.submitStatus = 'error';
+                            this.submitMessage = 'An error occurred. Please try again.';
+                        }
+                    }
+                }">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" x-model="formData.name" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" x-model="formData.email" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" x-model="formData.message" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="flex justify-end">
+                        <button type="submit" 
+                            class="inline-flex justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                            @click="submitForm">
+                            Send Message
+                        </button>
+                    </div>
+
+                    <!-- Status Messages -->
+                    <div x-show="submitStatus === 'success'" 
+                        class="mt-4 p-4 bg-green-100 text-green-700 rounded-md"
+                        x-text="submitMessage"></div>
+                    
+                    <div x-show="submitStatus === 'error'" 
+                        class="mt-4 p-4 bg-red-100 text-red-700 rounded-md"
+                        x-text="submitMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>&copy; 2024 Christopher Bradford. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
