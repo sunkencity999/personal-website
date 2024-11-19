@@ -2,12 +2,27 @@ import os
 import ftplib
 from pathlib import Path
 import sys
+import configparser
+
+# Load configuration
+config = configparser.ConfigParser()
+config_path = Path(__file__).parent / 'config.ini'
+
+if not config_path.exists():
+    print("Error: config.ini not found. Please create it with your FTP credentials.")
+    sys.exit(1)
+
+config.read(config_path)
 
 # FTP Configuration
-FTP_HOST = "ftp.christopherdanielbradford.com"
-FTP_USER = "admin@christopherdanielbradford.com"
-FTP_PASS = "CStyle32!"
-FTP_PORT = 21
+try:
+    FTP_HOST = config['FTP']['host']
+    FTP_USER = config['FTP']['user']
+    FTP_PASS = config['FTP']['password']
+    FTP_PORT = config['FTP'].getint('port', 21)
+except KeyError as e:
+    print(f"Error: Missing configuration key {e} in config.ini")
+    sys.exit(1)
 
 # Local directory configuration
 LOCAL_DIR = Path(__file__).parent / "src"

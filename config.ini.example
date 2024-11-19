@@ -1,0 +1,5 @@
+[FTP]
+host = your.ftp.host.com
+user = your_username
+password = your_password
+port = 21

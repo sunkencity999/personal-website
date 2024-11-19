@@ -27,6 +27,21 @@ python server.py
 http://localhost:5000
 ```
 
+## Configuration
+
+To deploy the website, you'll need to set up your FTP credentials:
+
+1. Copy `config.ini.example` to `config.ini`
+2. Edit `config.ini` with your FTP credentials:
+   ```ini
+   [FTP]
+   host = your.ftp.host.com
+   user = your_username
+   password = your_password
+   port = 21
+   ```
+3. The `config.ini` file is excluded from version control for security
+
 ## Deployment
 
 To deploy the website to the production server:
